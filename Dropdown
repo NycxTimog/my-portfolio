@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Description</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        #description-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 8px;
+            font-family: 'Cantarell', sans-serif;
+            text-align: justify;
+            margin: 0 auto;
+            display: inline-block;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            max-height: 100px; /* Adjust as needed for initial collapsed state */
+        }
+        .description.expanded {
+            max-height: 1000px; /* Large enough to fit the full content */
+        }
+        .show-more-button {
+            background-color: #f8981d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .show-more-button:hover {
+            background-color: #d87e00;
+        }
+    </style>
+</head>
+<body>
+
+<h3 id="description-title">Inside this course</h3>
+<div class="description" id="description">
+    <p><strong>Updated for the latest NABCEP PV Certification Exams</strong></p>
+    <p>This course is developed and taught by Sean White and includes lectures from solar legend Bill Brooks.</p>
+    <p>This course qualifies for 40 hours of advanced training required for the NABCEP PV Installation Professional Certification Exam as well as hours for all other NABCEP PV Certification Exams and CEU hours for recertification. HeatSpring is a <a href="https://www.heatspring.com/credentials"><strong>NABCEP Registered Provider</strong></a>.</p>
+    <p>Dive deep into advanced solar PV installation and design principles and practices addressed in the NABCEP PV Installer Job Task Analysis. You'll get access to detailed information and test-taking strategies specifically focused on the latest NABCEP PV Certification exams.</p>
+    <p>The main instructor for this course, <a href="/instructors/sean-white"><strong>Sean White</strong></a>, is one of HeatSpring's most popular and highest rated instructors. Sean is available to answer questions on the discussion board while you work through the course materials during your one-year session. He is extremely responsive and answers questions in great detail. Sean answers every question on a daily basis 99% of the time.</p>
+    <p>He is an IREC Master Trainer, was named 2014 Clean Energy Trainer of the Year, has taught thousands of professionals on solar technology, contributed to the development of the NABCEP PV Installation Professional Job Task Analysis, has been a member of the NABCEP PV Installation Professional Technical Committee, and has published multiple books on solar PV design and installation.</p>
+    <p>In order to complete this course, you'll need to purchase a copy of Sean White's <em>PV Engineering and Installation, a Preparation for the NABCEP PV Installation Professional, Specialist and Inspector Certification Exams 2nd Edition</em>. It is also recommended to get a copy of the book <em>PV and the NEC</em> by Sean White and Bill Brooks.</p>
+    <p>This course includes many references to the National Electrical Code (NEC). It may be helpful for you to get a copy of the 2017 NEC. It's important to note that NABCEP is on the 2017 NEC for most certification exams. This course has information for both the 2017 and 2020 NEC, which Bill Brooks was intimately involved with writing.</p>
+</div>
+<button class="show-more-button" id="show-more-btn" onclick="toggleDescription()">Show more</button>
+
+<script>
+    function toggleDescription() {
+        var description = document.getElementById('description');
+        var button = document.getElementById('show-more-btn');
+
+        if (description.classList.contains('expanded')) {
+            description.classList.remove('expanded');
+            button.textContent = 'Show more';
+        } else {
+            description.classList.add('expanded');
+            button.textContent = 'Show less';
+        }
+    }
+</script>
+
+</body>
+</html>
